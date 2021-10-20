@@ -1,0 +1,7 @@
+import('splines')
+importFrom("graphics", "lines", "plot")
+importFrom("stats", "quantile", "rnorm", "runif")
+useDynLib(tensorIMMAM, .registration=TRUE)
+exportPattern("^[[:alpha:]]+")
+importFrom(Rcpp, evalCpp)
+export(immam3,immam3_dr,immam4,immam4.dr,immam3.sim.fbs,immam3.sim.fsin,immam4.sim.fbs,immam4.sim.fsin)
