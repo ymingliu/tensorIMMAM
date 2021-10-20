@@ -121,5 +121,5 @@ library(tensorIMMAM)
 n <- 200; q <- 5; p <- 100; s <- 3; ng = 4
 group <- rep(1:ng,each=p/ng)
 mydata <- immam3.sim.fbs(n,q,p,s,group)
-fit <- with(mydata, immam3.dr(Y,X,group,K,r1_index,r2_index,r3_index,D0=D0,nlam=10))
+fit <- with(mydata, immam3.dr(Y,X,group,K,r1_index,r2_index,r3_index,D0=D0,nlam=5))
 }
