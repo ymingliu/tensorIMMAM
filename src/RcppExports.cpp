@@ -5,6 +5,7 @@
 #include <Rcpp.h>
 
 using namespace Rcpp;
+using namespace Eigen;
 
 // TransferModalUnfoldingsT
 MatrixXd TransferModalUnfoldingsT(MatrixXd S, int d1, int d2, VectorXi dim);
