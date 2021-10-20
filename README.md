@@ -21,28 +21,28 @@
     n <- 200; q <- 5; p <- 100; s <- 3; ng = 4
     group <- rep(1:ng,each=p/ng)
     mydata <- immam3.sim.fbs(n,q,p,s,group)
-    fit <- with(mydata, immam3.dr(Y,X,group,K,r1_index,r2_index,r3_index,D0=D0,nlam=10))
+    fit <- with(mydata, immam3.dr(Y,X,group,K,r1_index,r2_index,r3_index,D0=D0,nlam=5))
     
     # Example 2
     # The usage of function "immam4.dr"
     n <- 200; q <- 5; p <- 100; s <- 3; ng = 4
     group <- rep(1:ng,each=p/ng)
     mydata <- immam4.sim.fbs(n,q,p,s,group)
-    fit <- with(mydata, immam4.dr(Y,X,group,K,r1_index,r2_index,r3_index,r4_index,D0=D0,nlam=10))
+    fit <- with(mydata, immam4.dr(Y,X,group,K,r1_index,r2_index,r3_index,r4_index,D0=D0,nlam=5))
     
     # Example 3
     # The usage of function "immam3"
     n <- 200; q <- 5; p <- 100; s <- 3; ng <- 4
     group <- rep(1:ng,each=p/ng)
     mydata <- immam3.sim.fbs(n,q,p,s,group,isfixedR=1)
-    fit <- with(mydata, immam3(Y,X,group,K,r10,r20,r30,D0=D0,nlam=10))
+    fit <- with(mydata, immam3(Y,X,group,K,r10,r20,r30,D0=D0,nlam=5))
     
     # Example 4
     # The usage of function "immam4"
     n <- 200; q <- 5; p <- 100; s <- 3; ng <- 4
     group <- rep(1:ng,each=p/ng)
     mydata <- immam4.sim.fbs(n,q,p,s,group,isfixedR=1)
-    fit <- with(mydata, immam4(Y,X,group,K,r10,r20,r30,r40,D0=D0,nlam=10))
+    fit <- with(mydata, immam4(Y,X,group,K,r10,r20,r30,r40,D0=D0,nlam=5))
 
  
  # References
