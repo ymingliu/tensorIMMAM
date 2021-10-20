@@ -1,3 +1,8 @@
+assig <- function(n_args){
+  cargs <- vector("list", length(n_args))
+  for(i in 1:length(n_args)) cargs[[i]] <- 1:n_args[i]
+  t(expand.grid(cargs))
+}
 
 ##------------------------------------------------------------------------##
 ##--------------------produce the B-spline functions----------------------##
