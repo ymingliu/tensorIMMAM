@@ -409,7 +409,7 @@ List Estimation_pen_Dj(MatrixXd Y, MatrixXd Z, MatrixXd S, MatrixXd A, MatrixXd 
 {
     int j, p = A.rows(), r1 = A.cols(), K = opts.K;
     VectorXi activeA = VectorXi::Constant(p, 0);
-    double likhd0 = likhd1, eps = opts.eps;
+    double likhd0 = likhd1;
     MatrixXd Dnew, Anew, Bnew, Cnew, Snew, Z1, A1, Z2, A2;
     Anew = A;
     A1 = Am;
@@ -1205,7 +1205,7 @@ List EstPenColumnT4(MatrixXd Y, MatrixXd Z, MatrixXd S, MatrixXd A, MatrixXd B, 
     
     
     int l,j, step, max_step=opts.max_step, nlam=opts_pen.nlam, G = opts.G, K = opts.K, KG = K*G, p = opts.p;
-    int q = opts.q, n = opts.n, r1 = opts.r1, r2 = opts.r2, r3 = opts.r3, r4 = opts.r4;
+    int q = opts.q, r1 = opts.r1, r2 = opts.r2, r3 = opts.r3, r4 = opts.r4;
     double  likhd0 = 2*pow(10, 6), lambda1, likhd1, eps = opts.eps;
     MatrixXd Dnew, Anew, Bnew, Snew, Cnew, Dn, Z1, A1, Z2, A2;
     VectorXi activeA = VectorXi::Constant(p, 0), convergence1 = VectorXi::Constant(5, 1);
@@ -1356,7 +1356,7 @@ List EstPenColumnT4CV(MatrixXd Y, MatrixXd Z, MatrixXd Ytest, MatrixXd Ztest, Ma
     opts_pen.pen = as<int>(optsList_pen["pen"]);
     opts_pen.nlam = lambda.size();
     
-    int l,j, step, max_step=opts.max_step, nlam=opts_pen.nlam, KG = opts.K*opts.G, p = opts.p, r1 = opts.r1, n = opts.n;
+    int l,j, step, max_step=opts.max_step, nlam=opts_pen.nlam, KG = opts.K*opts.G, p = opts.p, r1 = opts.r1;
     double  likhd0 = pow(10, 6), lambda1, likhd1, eps = opts.eps;
     MatrixXd Dnew, Anew, Bnew, Snew, Cnew, Dn, Z1, A1, Z2, A2;
     VectorXi activeA = VectorXi::Constant(p, 0), convergence1 = VectorXi::Constant(5, 1);
